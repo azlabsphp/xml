@@ -49,10 +49,10 @@ class XMLDocument implements XMLDocumentInterface
      */
     public function __construct($root, string $version = '1.0', $encoding = 'utf-8', string $standalone = null)
     {
-        $this->root = $root;
         $this->version = $version ?? '1.0';
         $this->encoding = $encoding ?? 'utf-8';
         $this->standalone = $standalone;
+        $this->setRoot($root);
     }
 
     /**
